@@ -1,0 +1,8 @@
+CREATE SEQUENCE greeting_seq INCREMENT 1 START WITH 1 MINVALUE 1;
+
+CREATE TABLE greeting
+(
+    id   BIGINT  NOT NULL,
+    name VARCHAR NOT NULL,
+    PRIMARY KEY (id)
+);

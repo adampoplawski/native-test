@@ -1,6 +1,7 @@
 package org.acme;
 
 import io.quarkus.test.junit.QuarkusTest;
+import io.smallrye.config.inject.ConfigProducer;
 import jakarta.inject.Inject;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.reactive.mutiny.Mutiny;
@@ -24,7 +25,7 @@ class GreetingResourceTest {
 
         var configuration = new Configuration()
                 .addAnnotatedClass(Greeting.class)
-                .setProperty(URL, "jdbc:postgresql://localhost:57936/postgres")
+                .setProperty(URL, "jdbc:postgresql://localhost:59109/quarkus")
                 .setProperty(USER, "quarkus")
                 .setProperty(PASS, "quarkus")
                 .setProperty(DIALECT, "org.hibernate.dialect.PostgreSQLDialect")

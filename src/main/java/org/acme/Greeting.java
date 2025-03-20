@@ -2,7 +2,8 @@ package org.acme;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "greeting")
+@Table(name = "greeting")
 public class Greeting {
 
     @Id
